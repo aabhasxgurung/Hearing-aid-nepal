@@ -9,8 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#ffffff", // Clean white
+        surface: "#f6f6f6", // Light gray for sections/cards
+        foreground: "#1a1a1a", // Dark text for high contrast
+        accent: "#3FC18C", // Phonak-inspired Mint Green
+        muted: "#71717a", // Muted gray text
+        border: "#e5e5e5", // Subtle light border
+      },
+      fontFamily: {
+        mori: ["PPMori", "sans-serif"],
+        editorial: ["Editorial", "serif"],
+      },
+      backgroundImage: {
+        noise: "url('/noise.png')", // Placeholder for noise texture if added
       },
     },
   },
