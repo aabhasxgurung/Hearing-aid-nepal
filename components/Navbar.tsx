@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenuAlt4, HiX, HiOutlineShoppingCart } from "react-icons/hi";
 import Magnetic from "./Magnetic";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,12 +41,19 @@ const Navbar = () => {
         <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="relative z-50 group">
-            <span className="font-mori text-2xl font-bold tracking-tighter text-black">
+            {/* <span className="font-mori text-2xl font-bold tracking-tighter text-black">
               HEARING
-              <span className="font-editorial font-normal italic ml-1 text-gray-600 group-hover:text-blue-600 transition-colors duration-300">
+              <span className="font-editorial font-normal italic ml-1 text-accent group-hover:text-accent/80 transition-colors duration-300">
                 Aid
               </span>
-            </span>
+            </span> */}
+            <Image
+              src="/home/logo.png"
+              alt="Logo"
+              width={200}
+              height={50}
+              className=""
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -54,10 +62,10 @@ const Navbar = () => {
               <Magnetic key={link.name}>
                 <Link
                   href={link.href}
-                  className="font-mori text-xs uppercase tracking-[0.2em] text-black/80 hover:text-blue-600 transition-colors relative group"
+                  className="font-mori text-xs uppercase tracking-[0.2em] text-black/80 hover:text-accent transition-colors relative group"
                 >
                   {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-blue-600 transition-all duration-300 group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all duration-300 group-hover:w-full" />
                 </Link>
               </Magnetic>
             ))}
@@ -66,7 +74,7 @@ const Navbar = () => {
           {/* Actions */}
           <div className="hidden md:flex items-center gap-6">
             <Magnetic>
-              <button className="font-mori text-xs uppercase tracking-[0.2em] text-black/80 hover:text-blue-600 transition-colors">
+              <button className="font-mori text-xs uppercase tracking-[0.2em] text-black/80 hover:text-accent transition-colors">
                 Log in
               </button>
             </Magnetic>
@@ -109,7 +117,7 @@ const Navbar = () => {
                   <Link
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="font-editorial italic text-5xl text-black hover:text-blue-600 transition-colors"
+                    className="font-editorial italic text-5xl text-black hover:text-accent transition-colors"
                   >
                     {link.name}
                   </Link>

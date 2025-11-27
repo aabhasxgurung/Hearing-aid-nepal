@@ -19,7 +19,7 @@ const Footer = () => {
             <Link href="/" className="block mb-8 group">
               <span className="font-mori text-4xl md:text-6xl text-foreground font-bold tracking-tighter">
                 HEARING
-                <span className="font-editorial font-normal italic ml-2 text-muted group-hover:text-accent transition-colors duration-500">
+                <span className="font-editorial font-normal italic ml-2 text-accent group-hover:text-accent/80 transition-colors duration-500">
                   Aid
                 </span>
               </span>

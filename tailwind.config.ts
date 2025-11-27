@@ -12,7 +12,7 @@ const config: Config = {
         background: "#ffffff", // Clean white
         surface: "#f6f6f6", // Light gray for sections/cards
         foreground: "#1a1a1a", // Dark text for high contrast
-        accent: "#3FC18C", // Phonak-inspired Mint Green
+        accent: "#D2042D", // Cherry Red
         muted: "#71717a", // Muted gray text
         border: "#e5e5e5", // Subtle light border
       },
