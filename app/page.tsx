@@ -5,7 +5,6 @@ import Brands from "@/components/Brands";
 import FeaturedProducts from "@/components/FeaturedProducts";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
-import Image from "next/image";
 
 export default function Home() {
   return (

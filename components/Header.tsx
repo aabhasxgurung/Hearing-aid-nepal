@@ -53,14 +53,16 @@ const Header = () => {
           </p>
 
           <Magnetic>
-            <button className="group relative inline-flex items-center gap-3 px-8 py-4 bg-foreground/5 backdrop-blur-sm border border-foreground/10 rounded-full overflow-hidden transition-all hover:bg-foreground hover:text-white">
-              <span className="relative z-10 font-mori text-sm uppercase tracking-widest font-bold">
-                Explore Devices
-              </span>
-              <span className="relative z-10 group-hover:rotate-45 transition-transform duration-300">
-                <FaArrowRight />
-              </span>
-            </button>
+            <Link href="/products">
+              <button className="group relative inline-flex items-center gap-3 px-8 py-4 bg-foreground/5 backdrop-blur-sm border border-foreground/10 rounded-full overflow-hidden transition-all hover:bg-foreground hover:text-white">
+                <span className="relative z-10 font-mori text-sm uppercase tracking-widest font-bold">
+                  Explore Devices
+                </span>
+                <span className="relative z-10 group-hover:rotate-45 transition-transform duration-300">
+                  <FaArrowRight />
+                </span>
+              </button>
+            </Link>
           </Magnetic>
         </motion.div>
 

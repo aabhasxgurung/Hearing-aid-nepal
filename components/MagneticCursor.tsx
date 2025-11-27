@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function MagneticCursor() {
-  const [cursorSize, setCursorSize] = useState(15);
+  const [cursorSize] = useState(15);
   const mouse = {
     x: useMotionValue(0),
     y: useMotionValue(0),

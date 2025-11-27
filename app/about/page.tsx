@@ -69,10 +69,10 @@ const AboutPage = () => {
               leader in audiology services.
             </p>
             <p>
-              We understand that hearing is more than just a sense—it's how we
-              connect with the world, our loved ones, and ourselves. That's why
-              we don't just sell devices; we provide comprehensive hearing
-              solutions tailored to your unique lifestyle.
+              We understand that hearing is more than just a sense—it&apos;s how
+              we connect with the world, our loved ones, and ourselves.
+              That&apos;s why we don&apos;t just sell devices; we provide
+              comprehensive hearing solutions tailored to your unique lifestyle.
             </p>
             <p>
               Our team of certified audiologists and support staff are committed

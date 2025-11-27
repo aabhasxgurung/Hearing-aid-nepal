@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
-import { PiCheckCircle, PiArrowLeft } from "react-icons/pi";
+import { PiArrowLeft } from "react-icons/pi";
 import Magnetic from "@/components/Magnetic";
 import { products } from "@/data/products";
 

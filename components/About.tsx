@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import { PiCheckCircle } from "react-icons/pi";
 
 const About = () => {
   const stats = [
@@ -33,11 +32,11 @@ const About = () => {
             <div className="space-y-8 text-foreground/70 font-mori text-lg leading-relaxed max-w-xl">
               <p>
                 We started Nepal Hearing Aid to create a single destination for
-                hearing aid research, shopping, and expert care. We're glad
-                you're here.
+                hearing aid research, shopping, and expert care. We&apos;re glad
+                you&apos;re here.
               </p>
               <p>
-                As Nepal's pioneering hearing aid center, we've been
+                As Nepal&apos;s pioneering hearing aid center, we&apos;ve been
                 transforming lives since our inception. Our mission is simple:
                 to reconnect you with the sounds that matter most.
               </p>
