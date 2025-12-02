@@ -50,7 +50,7 @@ const FeaturedProducts = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
@@ -58,41 +58,29 @@ const FeaturedProducts = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.8 }}
-              className="group cursor-pointer"
+              className="group cursor-pointer flex flex-col gap-6"
             >
-              <div className="relative aspect-[4/5] bg-surface rounded-lg overflow-hidden mb-6">
-                <div className="absolute inset-0 flex items-center justify-center p-8 group-hover:scale-105 transition-transform duration-700 ease-out">
+              <div className="relative aspect-[4/5] bg-surface overflow-hidden">
+                <div className="absolute inset-0 flex items-center justify-center p-12 group-hover:scale-105 transition-transform duration-700 ease-out">
                   <Image
                     src={product.image}
                     alt={product.name}
                     width={400}
                     height={500}
-                    className="object-contain w-full h-full drop-shadow-xl"
+                    className="object-contain w-full h-full drop-shadow-2xl"
                   />
-                </div>
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                  <Magnetic>
-                    <button className="bg-white text-black px-8 py-4 rounded-full font-mori text-xs uppercase tracking-widest transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500 shadow-lg">
-                      Quick View
-                    </button>
-                  </Magnetic>
                 </div>
               </div>
 
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="text-2xl font-mori text-foreground mb-1 group-hover:text-accent transition-colors">
+              <div className="flex flex-col gap-2">
+                <span className="text-xs uppercase tracking-widest text-muted">
+                  {product.category}
+                </span>
+                <div className="flex justify-between items-baseline">
+                  <h3 className="text-3xl font-mori text-foreground group-hover:underline decoration-1 underline-offset-4 transition-all">
                     {product.name}
                   </h3>
-                  <p className="text-muted text-sm uppercase tracking-wider">
-                    {product.category}
-                  </p>
                 </div>
-                <span className="font-mori text-foreground/60">
-                  {product.price}
-                </span>
               </div>
             </motion.div>
           ))}

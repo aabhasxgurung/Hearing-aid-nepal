@@ -2,9 +2,10 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { HiMenuAlt4, HiX, HiOutlineShoppingCart } from "react-icons/hi";
+import { HiMenuAlt4, HiX } from "react-icons/hi";
 import Magnetic from "./Magnetic";
 import Image from "next/image";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Products", href: "/products" },
+    { name: "Hearing Aids", href: "/products" },
     { name: "Accessories", href: "/accessories" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
@@ -29,7 +30,7 @@ const Navbar = () => {
   return (
     <>
       <motion.nav
-        initial={{ y: -100 }}
+        initial={{ y: -150 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -74,13 +75,8 @@ const Navbar = () => {
           {/* Actions */}
           <div className="hidden md:flex items-center gap-6">
             <Magnetic>
-              <button className="font-mori text-xs uppercase tracking-[0.2em] text-black/80 hover:text-accent transition-colors">
-                Log in
-              </button>
-            </Magnetic>
-            <Magnetic>
-              <button className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center text-black hover:bg-black hover:text-white transition-all duration-300">
-                <HiOutlineShoppingCart size={18} />
+              <button className="w-full px-10 h-10 rounded-full border border-black/10 flex items-center justify-center gap-2 text-white font-medium bg-accent hover:bg-black hover:text-white transition-all duration-300">
+                Book an Appointment <FaPhoneAlt />
               </button>
             </Magnetic>
           </div>

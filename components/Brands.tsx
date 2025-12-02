@@ -1,16 +1,14 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const brands = [
-  "Phonak",
-  "Oticon",
-  "Starkey",
-  "Widex",
-  "Signia",
-  "Resound",
-  "Unitron",
-  "Bernafon",
+  { name: "Phonak", src: "/home/phonak.png" },
+  { name: "Oticon", src: "/home/oticon.png" },
+  { name: "Starkey", src: "/home/starkey.png" },
+  { name: "Signia", src: "/home/signia.png" },
+  { name: "Resound", src: "/home/resound.png" },
 ];
 
 const Brands = () => {
@@ -27,12 +25,17 @@ const Brands = () => {
           }}
         >
           {[...brands, ...brands, ...brands, ...brands].map((brand, index) => (
-            <span
+            <div
               key={index}
-              className="text-4xl md:text-6xl font-mori font-bold text-foreground/20 uppercase hover:text-foreground transition-colors duration-500 cursor-default tracking-tight"
+              className="relative w-[250px] h-[100px] opacity-100 transition-opacity duration-500 grayscale hover:grayscale-0"
             >
-              {brand}
-            </span>
+              <Image
+                src={brand.src}
+                alt={brand.name}
+                fill
+                className="object-contain"
+              />
+            </div>
           ))}
         </motion.div>
       </div>
